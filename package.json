@@ -1,0 +1,12 @@
+{
+  "name": "hotel-zante",
+  "description": "hotel-zante",
+  "version": "1.0.0",
+  "keywords": [],
+  "author": "Pashchuk Ilya",
+  "license": "ISC",
+  "scripts": {
+  },
+  "devDependencies": {
+  }
+}
