@@ -202,7 +202,7 @@
           <div class="image-gallery">
             <!-- ITEM -->
             <div class="col-md-3 col-sm-4">
-              <figure class="gs2_item">
+              <figure class="gs2_item">я
                 <a href="images/gallery/gallery1.jpg" class="hover_effect h_lightbox h_blue">
                   <img src="{{ some dynamical image }}" class="img-responsive" alt="{{ some dynamical image }}">
                 </a>
@@ -213,12 +213,37 @@
       </div>
     </section>
 
-    <!-- ========== VIDEO ========== -->
-    <section id="video">
-      <div class="inner gradient_overlay">
-        <div class="container">
-          <div class="video_popup">
-            <a class="popup-vimeo" href="videos/hero_video.mp4"><i class="fa fa-play"></i></a>
+    <!-- ========== FEATURES ========== -->
+    <section class="our-places lightgrey_bg">
+      <div class="container">
+        <div class="main_title mt_wave mt_blue a_center">
+          <h2>Places</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-md-7">
+            <article class="our-places__map" id="places-map">
+
+            </article>
+          </div>
+
+          <div class="col-md-5">
+            <div class="our-places__tabs">
+              <article class="our-places__tab --is-active" date-type-paces="restaurant">
+                <h5>Restaurant</h5>
+                <mark>{{some text}}</mark>
+              </article>
+
+              <article class="our-places__tab" date-type-paces="spa">
+                <h5>Spa - Beauty & Health</h5>
+                <mark>{{some text}}</mark>
+              </article>
+
+              <article class="our-places__tab" date-type-paces="Restaurant">
+                <h5>Conference Room</h5>
+                <mark>{{some text}}</mark>
+              </article>
+            </div>
           </div>
         </div>
       </div>
@@ -301,7 +326,7 @@
 
   <!-- ========== JAVASCRIPT ========== -->
   <script type="text/javascript" src="js/jquery.min.js"></script>
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxT6FX8xM4xhpJHYQe3ZM1klcnH43-MSo"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxT6FX8xM4xhpJHYQe3ZM1klcnH43-MSo&libraries=places"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/bootstrap-datepicker.min.js"></script>
   <script type="text/javascript" src="js/bootstrap-select.min.js"></script>
