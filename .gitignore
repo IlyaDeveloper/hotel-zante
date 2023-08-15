@@ -10,6 +10,7 @@ m# See http://help.github.com/ignore-files/ for more about ignoring files.
 .parcel-cache
 .firebase
 .cache
+.npmrc
 firebase-debug.log
 
 # dependencies

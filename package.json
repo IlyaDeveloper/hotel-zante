@@ -6,7 +6,16 @@
   "author": "Pashchuk Ilya",
   "license": "ISC",
   "scripts": {
-    "css": "npx postcss ./src/scss/style.scss --output ./src/css/main.css --verbose"
+    "clean-dist": "rm -rf dist && mkdir dist",
+    "clean-css": "rm -rf src/css",
+    "clean-scss": "rm -rf dist/scss",
+    "copy-src": "cp -r src/* dist",
+    "scss:build": "npm run clean-css && npx postcss ./src/scss/style.scss --output ./src/css/main.css --verbose",
+    "scss:watch": "npm run clean-css && sass --watch --stop-on-error ./src/scss/style.scss ./src/css/main.css",
+    "dev": "npm run scss:watch",
+    "build": "npm run clean-dist && npm run scss:build && npm run copy-src && npm run clean-scss",
+    "deploy": "sshpass -p ${npm_config_deploy_ssh_password} rsync -avz --delete -e 'ssh -p '${npm_config_deploy_ssh_port} ./dist/ ${npm_config_deploy_ssh_server}:${npm_config_deploy_ssh_path}",
+    "deploy:dev": "sshpass -p ${npm_config_deploy_dev_ssh_password} rsync -avz --delete -e 'ssh -p '${npm_config_deploy_dev_ssh_port} ./dist/ ${npm_config_deploy_dev_ssh_server}:${npm_config_deploy_dev_ssh_path}"
   },
   "dependencies": {
   },
